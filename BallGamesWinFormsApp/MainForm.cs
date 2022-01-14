@@ -12,6 +12,10 @@ namespace BallGamesWinFormsApp
 {
     public partial class MainForm : Form
     {
+        RandomSizeAndPointBall ball;
+
+        List<MoveBall> mBalls = new List<MoveBall>();
+        PointBall pBall;
         public MainForm()
         {
             InitializeComponent();
@@ -19,25 +23,47 @@ namespace BallGamesWinFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var ball = new Ball(this);
-            ball.Show();
+            // timer1.Enabled = true; the same:
+            timer1.Start();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var rBall = new RandomSizeAndPointBall(this);
-            rBall.Show();
+            ball = new RandomSizeAndPointBall(this);
+            ball.Show();
         }
 
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
-            var pointBall = new PointBall(this, e.X, e.Y);
-            pointBall.Show();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            pBall = new PointBall(this, e.X, e.Y);
+            pBall.Show();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
         }
 
+      
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                MoveBall moveBall = new MoveBall(this);
+                mBalls.Add(moveBall);
+                moveBall.Start();
+            }
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (var mBall in mBalls)
+            {
+                mBall.Stop();
+            }
         }
     }
 }
