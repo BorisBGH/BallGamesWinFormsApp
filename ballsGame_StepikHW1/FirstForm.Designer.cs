@@ -63,7 +63,7 @@ namespace ballsGame_StepikHW1
             this.Controls.Add(this.button_Create);
             this.Name = "FirstForm";
             this.Text = "FirstForm";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FirstForm_MouseDown);
+            this.Load += new System.EventHandler(this.FirstForm_Load);
             this.ResumeLayout(false);
 
         }

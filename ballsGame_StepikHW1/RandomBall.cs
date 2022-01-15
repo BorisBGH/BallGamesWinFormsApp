@@ -12,6 +12,9 @@ namespace ballsGame_StepikHW1
             size = random.Next(50, 90);
             x = random.Next(0, form.Size.Width);
             y = random.Next(0, form.Height);
+            vX = random.Next(-5, 6);
+            vY = random.Next(-5, 6);
+
            
         }
     }

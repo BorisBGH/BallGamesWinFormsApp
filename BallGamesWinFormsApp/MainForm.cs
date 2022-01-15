@@ -42,7 +42,7 @@ namespace BallGamesWinFormsApp
       
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
        

@@ -19,55 +19,7 @@ namespace ballsGame_StepikHW1
         protected int vY = 2;
         protected Timer timer;
 
-        //public int LeftDot
-        //{
-        //    set
-        //    {
-        //        LeftDot = x;
-        //    }
-
-        //    get
-        //    {
-        //        return LeftDot;
-        //    }
-        //}
-
-        //public int RightDot
-        //{
-        //    set
-        //    {
-        //        RightDot = x + size;
-        //    }
-        //    get
-        //    {
-        //        return RightDot;
-        //    }
-        //}
-
-        //public int UpDot
-        //{
-        //    set
-        //    {
-        //        UpDot = y;
-        //    }
-        //    get
-        //    {
-        //        return UpDot;
-        //    }
-        //}
-
-        //public int DownDot
-        //{
-        //    set
-        //    {
-        //        DownDot = y + size;
-        //    }
-        //    get
-        //    {
-        //        return DownDot;
-        //    }
-
-        //}
+       
 
         public Ball(Form form)
         {
@@ -121,6 +73,11 @@ namespace ballsGame_StepikHW1
            Go();
            Show();
             
+        }
+
+        public bool isOnForm()
+        {
+            return x >= 0 && y >= 0 && y + 70 <= form.ClientSize.Height && x + 70 <= form.ClientSize.Width;
         }
 
     }

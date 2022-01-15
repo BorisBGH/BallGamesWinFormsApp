@@ -26,6 +26,7 @@ namespace ballsGame_StepikHW2
         {
             balls = new List<RandomBall>();
             random = new Random();
+            button_Stop.Enabled = false;
         }
 
         private void button_Create_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace ballsGame_StepikHW2
                 balls.Add(ball);
                 ball.Start();
             }
-            
+            button_Stop.Enabled = true;
         }
 
         private void button_Stop_Click(object sender, EventArgs e)

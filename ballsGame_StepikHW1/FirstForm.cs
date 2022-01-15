@@ -26,14 +26,14 @@ namespace ballsGame_StepikHW1
             random = new Random();
             var randomBallsNumber = random.Next(5,11);
 
-        
-
             for (int i = 0; i < randomBallsNumber; i++)
             {
                 var ball = new RandomBall(this);
                 balls.Add(ball);
                 ball.Start();
             }
+
+            button_Stop.Enabled = true;
                       
          }
 
@@ -51,7 +51,7 @@ namespace ballsGame_StepikHW1
             {
                 ball.Stop();
 
-                if (ball.x > 0 && ball.y > 0 && ball.y + 70 < this.Size.Height && ball.x + 70 < this.Size.Width)
+                if (ball.isOnForm())
                 {
                     count++;
                 }
@@ -61,11 +61,9 @@ namespace ballsGame_StepikHW1
             count = 0;
         }
 
-        private void FirstForm_MouseDown(object sender, MouseEventArgs e)
+        private void FirstForm_Load(object sender, EventArgs e)
         {
-            
-
-            
+            button_Stop.Enabled = false;
         }
     }
 
