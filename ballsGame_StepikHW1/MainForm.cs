@@ -55,7 +55,7 @@ namespace ballsGame_StepikHW1
             {
                 ball.Stop();
 
-                if (ball.isOnForm())
+                if (ball.IsOnForm())
                 {
                     count++;
                 }

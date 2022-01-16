@@ -10,18 +10,19 @@ namespace ballsCommonWF
         
         public RandomBall(Form form) : base(form)
         {
-            size = random.Next(50, 90);
-            x = random.Next(0, form.Size.Width);
-            y = random.Next(0, form.Height);
+            radius = random.Next(20, 50);
+            centerX = random.Next(0, form.Size.Width);
+            centerY = random.Next(0, form.Height);
             vX = random.Next(-5, 6);
             vY = random.Next(-5, 6);
-
-           
+ 
         }
 
         public bool isMovable()
         {
             return timer.Enabled;
         }
+
+        
     }
 }

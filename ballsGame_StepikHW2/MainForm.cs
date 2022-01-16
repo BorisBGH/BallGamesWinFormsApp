@@ -58,7 +58,7 @@ namespace ballsGame_StepikHW2
         {
             foreach (var ball in balls)
             {
-                if (ball.isMovable() && (e.X >= ball.x && e.X <= ball.x + 70  && e.Y >= ball.y && e.Y <= ball.y + 70))
+                if (ball.isMovable() && ball.HasPoint(e.X, e.Y))
                 {
 
                         ball.Stop();

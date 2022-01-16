@@ -14,9 +14,9 @@ namespace ballsCommonWF
     public class Ball
     {
         private Form form;
-        protected int size = 70;
-        public int x = 0;
-        public int y = 0;
+        protected int radius = 25;
+        public int centerX = 0;
+        public int centerY = 0;
         protected int vX = 2;
         protected int vY = 2;
         protected Timer timer;
@@ -38,16 +38,23 @@ namespace ballsCommonWF
 
         public void Show()
         {
-            var graphics = form.CreateGraphics();
-            var rectangle = new Rectangle(x, y, size, size);
             var brush = Brushes.Black;
+            Draw(brush);
+        }
+
+        private void Draw(Brush brush)
+        {
+            var graphics = form.CreateGraphics();
+            var rectangle = new Rectangle(centerX - radius, centerY - radius, radius * 2, radius * 2);
             graphics.FillEllipse(brush, rectangle);
         }
 
-        public void Go()
+        public virtual void Go()
         {
-                x += vX;
-                y += vY;
+                centerX += vX;
+                centerY += vY;
+
+            
         }
 
         public void Start()
@@ -62,11 +69,8 @@ namespace ballsCommonWF
 
         public void Clear()
         {
-            var graphics = form.CreateGraphics();
-            var rectangle = new Rectangle(x, y, size, size);
-           // var brush = Brushes.White;
-            SolidBrush sBrush = new SolidBrush(SystemColors.Control);
-            graphics.FillEllipse(sBrush, rectangle);
+            var brush = new SolidBrush(form.BackColor);
+            Draw(brush);
         }
 
         public void Move()
@@ -78,9 +82,34 @@ namespace ballsCommonWF
             
         }
 
-        public bool isOnForm()
+        public int LeftSide()
         {
-            return x >= 0 && y >= 0 && y + 70 <= form.ClientSize.Height && x + 70 <= form.ClientSize.Width;
+           return radius;
+        }
+
+        public int RightSide()
+        {
+            return form.ClientSize.Width - radius;
+        }
+
+        public int TopSide()
+        {
+            return radius;
+        }
+
+        public int DownSide()
+        {
+            return form.ClientSize.Height - radius;
+        }
+
+        public bool IsOnForm()
+        {
+            return centerX >= LeftSide() && centerX <= RightSide() && centerY >= TopSide() && centerY <= DownSide();
+        }
+
+        public bool HasPoint(int pointX, int pointY)
+        {
+          return  (pointX - centerX) * (pointX - centerX) + (pointY - centerY) * (pointY - centerY) <= radius * radius;
         }
 
     }
