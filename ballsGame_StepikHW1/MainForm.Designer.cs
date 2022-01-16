@@ -1,7 +1,7 @@
 ﻿
 namespace ballsGame_StepikHW1
 {
-    partial class FirstForm
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.

@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace ballsGame_StepikHW2
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         List<RandomBall> balls;
         int count = 0;
 
         Random random;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

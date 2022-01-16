@@ -17,7 +17,7 @@ namespace ballsGame_StepikHW1
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FirstForm());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -11,13 +11,13 @@ using ballsCommonWF;
 
 namespace ballsGame_StepikHW1
 {
-    public partial class FirstForm : Form
+    public partial class MainForm : Form
     {
         Random random;
         List<RandomBall> balls = new List<RandomBall>();
         int count = 0;
         
-        public FirstForm()
+        public MainForm()
         {
             InitializeComponent();
         }
