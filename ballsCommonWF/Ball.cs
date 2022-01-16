@@ -4,9 +4,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using System.Windows;
 using System.Windows.Forms;
 
-namespace ballsGame_StepikHW1
+namespace ballsCommonWF
 {
 
     public class Ball
@@ -62,8 +64,9 @@ namespace ballsGame_StepikHW1
         {
             var graphics = form.CreateGraphics();
             var rectangle = new Rectangle(x, y, size, size);
-            var brush = Brushes.White;
-            graphics.FillEllipse(brush, rectangle);
+           // var brush = Brushes.White;
+            SolidBrush sBrush = new SolidBrush(SystemColors.Control);
+            graphics.FillEllipse(sBrush, rectangle);
         }
 
         public void Move()

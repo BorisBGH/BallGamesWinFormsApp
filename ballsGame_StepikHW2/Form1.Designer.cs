@@ -33,6 +33,7 @@ namespace ballsGame_StepikHW2
             this.button_Stop = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label_counter = new System.Windows.Forms.Label();
+            this.button_Clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_Create
@@ -47,7 +48,7 @@ namespace ballsGame_StepikHW2
             // 
             // button_Stop
             // 
-            this.button_Stop.Location = new System.Drawing.Point(618, 54);
+            this.button_Stop.Location = new System.Drawing.Point(618, 41);
             this.button_Stop.Name = "button_Stop";
             this.button_Stop.Size = new System.Drawing.Size(157, 23);
             this.button_Stop.TabIndex = 1;
@@ -58,7 +59,7 @@ namespace ballsGame_StepikHW2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(618, 97);
+            this.label1.Location = new System.Drawing.Point(618, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 15);
             this.label1.TabIndex = 2;
@@ -67,18 +68,29 @@ namespace ballsGame_StepikHW2
             // label_counter
             // 
             this.label_counter.AutoSize = true;
-            this.label_counter.Location = new System.Drawing.Point(737, 97);
+            this.label_counter.Location = new System.Drawing.Point(737, 106);
             this.label_counter.Name = "label_counter";
             this.label_counter.Size = new System.Drawing.Size(13, 15);
             this.label_counter.TabIndex = 3;
             this.label_counter.Text = "0";
             // 
+            // button_Clear
+            // 
+            this.button_Clear.Location = new System.Drawing.Point(618, 70);
+            this.button_Clear.Name = "button_Clear";
+            this.button_Clear.Size = new System.Drawing.Size(157, 23);
+            this.button_Clear.TabIndex = 4;
+            this.button_Clear.Text = "Очистить";
+            this.button_Clear.UseVisualStyleBackColor = true;
+            this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.label_counter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_Stop);
@@ -98,6 +110,7 @@ namespace ballsGame_StepikHW2
         private System.Windows.Forms.Button button_Stop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_counter;
+        private System.Windows.Forms.Button button_Clear;
     }
 }
 

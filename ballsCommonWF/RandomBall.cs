@@ -1,7 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Windows.Forms;
 
-namespace ballsGame_StepikHW1
+namespace ballsCommonWF
 {
     public class RandomBall : Ball
     {
@@ -16,6 +17,11 @@ namespace ballsGame_StepikHW1
             vY = random.Next(-5, 6);
 
            
+        }
+
+        public bool isMovable()
+        {
+            return timer.Enabled;
         }
     }
 }
