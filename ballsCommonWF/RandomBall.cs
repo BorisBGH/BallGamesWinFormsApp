@@ -6,13 +6,13 @@ namespace ballsCommonWF
 {
     public class RandomBall : Ball
     {
-        private Random random = new Random();
+        protected Random random = new Random();
         
-        public RandomBall(Form form) : base(form)
+        public RandomBall(Control control) : base(control)
         {
             radius = random.Next(20, 50);
-            centerX = random.Next(0, form.Size.Width);
-            centerY = random.Next(0, form.Height);
+            centerX = random.Next(0, control.Size.Width);
+            centerY = random.Next(0, control.Height);
             vX = random.Next(-5, 6);
             vY = random.Next(-5, 6);
  

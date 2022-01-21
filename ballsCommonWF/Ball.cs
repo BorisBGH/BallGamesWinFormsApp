@@ -13,7 +13,7 @@ namespace ballsCommonWF
 
     public class Ball
     {
-        private Form form;
+        private Control control;
         protected int radius = 25;
         public int centerX = 0;
         public int centerY = 0;
@@ -23,9 +23,9 @@ namespace ballsCommonWF
 
        
 
-        public Ball(Form form)
+        public Ball(Control control)
         {
-            this.form = form;
+            this.control = control;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
@@ -36,15 +36,15 @@ namespace ballsCommonWF
             Move();
         }
 
-        public void Show()
+        public virtual void Show()
         {
             var brush = Brushes.Black;
             Draw(brush);
         }
 
-        private void Draw(Brush brush)
+        protected  void Draw(Brush brush)
         {
-            var graphics = form.CreateGraphics();
+            var graphics = control.CreateGraphics();
             var rectangle = new Rectangle(centerX - radius, centerY - radius, radius * 2, radius * 2);
             graphics.FillEllipse(brush, rectangle);
         }
@@ -54,7 +54,6 @@ namespace ballsCommonWF
                 centerX += vX;
                 centerY += vY;
 
-            
         }
 
         public void Start()
@@ -69,7 +68,7 @@ namespace ballsCommonWF
 
         public void Clear()
         {
-            var brush = new SolidBrush(form.BackColor);
+            var brush = new SolidBrush(control.BackColor);
             Draw(brush);
         }
 
@@ -89,7 +88,7 @@ namespace ballsCommonWF
 
         public int RightSide()
         {
-            return form.ClientSize.Width - radius;
+            return control.ClientSize.Width - radius;
         }
 
         public int TopSide()
@@ -99,7 +98,7 @@ namespace ballsCommonWF
 
         public int DownSide()
         {
-            return form.ClientSize.Height - radius;
+            return control.ClientSize.Height - radius;
         }
 
         public bool IsOnForm()
