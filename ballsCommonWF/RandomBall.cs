@@ -13,9 +13,9 @@ namespace ballsCommonWF
             radius = random.Next(20, 50);
             centerX = random.Next(0, control.Size.Width);
             centerY = random.Next(0, control.Height);
-            vX = random.Next(-5, 6);
+            vX = random.Next(-5,6);
             vY = random.Next(-5, 6);
- 
+
         }
 
         public bool isMovable()

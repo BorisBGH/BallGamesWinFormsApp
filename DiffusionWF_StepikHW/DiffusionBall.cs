@@ -12,24 +12,22 @@ namespace DiffusionWF_StepikHW
 {
    public class DiffusionBall : BilliardBall
     {
-        Brush brush;
-        public int StartPoint { get; set; }
+        private Control control;
 
-        public DiffusionBall(Control control, int startPoint, int endPoint, Brush brush) : base(control)
+        public DiffusionBall(Control control) : base(control)
         {
-            StartPoint = startPoint;
-            centerX = random.Next(startPoint, endPoint);
-            this.brush = brush;
+            this.control = control;
         }
 
-        public override void Show()
+        public bool LeftOfCenter()
         {
-            Draw(brush);    
+            return centerX + radius < control.ClientSize.Width / 2;
         }
-     /*   public override void Draw(Brush brush)
+
+        public bool RightOfCenter()
         {
-            base.Draw(brush);
-        }*/
+            return centerX - radius > control.ClientSize.Width / 2;
+        }
 
     }
 }

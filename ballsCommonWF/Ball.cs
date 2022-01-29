@@ -16,7 +16,7 @@ namespace ballsCommonWF
         private Control control;
         protected int radius = 25;
         public int centerX = 0;
-        public int centerY = 0;
+        public int  centerY = 0;
         protected int vX = 2;
         protected int vY = 2;
         protected Timer timer;

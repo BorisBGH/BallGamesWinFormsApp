@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace DiffusionWF_StepikHW
 {
-    class RightBall : BilliardBall
+    class RightBall : DiffusionBall
     {
         public RightBall(Control control) : base(control)
         {
