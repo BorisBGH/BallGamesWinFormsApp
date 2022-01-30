@@ -13,12 +13,12 @@ namespace ballsCommonWF
 
     public class Ball
     {
-        private Control control;
-        protected int radius = 25;
-        public int centerX = 0;
-        public int  centerY = 0;
-        protected int vX = 2;
-        protected int vY = 2;
+        protected Control control;
+        protected float radius = 25;
+        public float centerX = 0;
+        public float  centerY = 0;
+        protected float vX = 2;
+        protected float vY = 2;
         protected Timer timer;
 
        
@@ -42,10 +42,10 @@ namespace ballsCommonWF
             Draw(brush);
         }
 
-        protected  void Draw(Brush brush)
+        protected virtual void Draw(Brush brush)
         {
             var graphics = control.CreateGraphics();
-            var rectangle = new Rectangle(centerX - radius, centerY - radius, radius * 2, radius * 2);
+            var rectangle = new RectangleF(centerX - radius, centerY - radius, radius * 2, radius * 2);
             graphics.FillEllipse(brush, rectangle);
         }
 
@@ -81,22 +81,22 @@ namespace ballsCommonWF
             
         }
 
-        public int LeftSide()
+        public float LeftSide()
         {
            return radius;
         }
 
-        public int RightSide()
+        public float RightSide()
         {
             return control.ClientSize.Width - radius;
         }
 
-        public int TopSide()
+        public float TopSide()
         {
             return radius;
         }
 
-        public int DownSide()
+        public float DownSide()
         {
             return control.ClientSize.Height - radius;
         }

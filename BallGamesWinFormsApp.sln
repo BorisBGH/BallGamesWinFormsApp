@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ballsCommonWF", "ballsCommo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "billiardBallsWF", "billiardBallsWF\billiardBallsWF.csproj", "{D590E268-805F-44F7-BB57-58CB14E39A9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffusionWF_StepikHW", "DiffusionWF_StepikHW\DiffusionWF_StepikHW.csproj", "{7DA551C1-0994-43C3-9439-756622A50F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiffusionWF_StepikHW", "DiffusionWF_StepikHW\DiffusionWF_StepikHW.csproj", "{7DA551C1-0994-43C3-9439-756622A50F4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaluteBalls_StepikWF", "SaluteBalls_StepikWF\SaluteBalls_StepikWF.csproj", "{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaluteBallsWF_Stepik_HW2_rocket", "SaluteBallsWF_Stepik_HW2_rocket\SaluteBallsWF_Stepik_HW2_rocket.csproj", "{1B6948A7-2188-4D0A-BFA2-C322758C60A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaluteBalls_Stepik_HW3_ninja", "SaluteBalls_Stepik_HW3_ninja\SaluteBalls_Stepik_HW3_ninja.csproj", "{59A82468-39A4-4E64-BE39-3E5408671891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{7DA551C1-0994-43C3-9439-756622A50F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DA551C1-0994-43C3-9439-756622A50F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DA551C1-0994-43C3-9439-756622A50F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6948A7-2188-4D0A-BFA2-C322758C60A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6948A7-2188-4D0A-BFA2-C322758C60A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6948A7-2188-4D0A-BFA2-C322758C60A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6948A7-2188-4D0A-BFA2-C322758C60A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A82468-39A4-4E64-BE39-3E5408671891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A82468-39A4-4E64-BE39-3E5408671891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A82468-39A4-4E64-BE39-3E5408671891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A82468-39A4-4E64-BE39-3E5408671891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
