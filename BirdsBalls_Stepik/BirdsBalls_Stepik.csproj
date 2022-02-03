@@ -6,4 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ballsCommonWF\ballsCommonWF.csproj" />
+    <ProjectReference Include="..\SaluteBalls_StepikWF\SaluteBalls_StepikWF.csproj" />
+  </ItemGroup>
+
 </Project>

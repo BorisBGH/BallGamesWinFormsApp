@@ -11,9 +11,9 @@ namespace SaluteBalls_StepikWF
 {
   public  class SalutBall : RandomBall
   {
-        private float g = 0.2f;
+        protected float g = 0.2f;
       //  private Random random = new Random(); inherited field
-        private SolidBrush brush; 
+        protected SolidBrush brush; 
 
 
         public SalutBall(Control control, float centerX, float centerY) : base(control)
