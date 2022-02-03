@@ -11,8 +11,7 @@ namespace BirdsBalls_Stepik
 {
     public class BirdBall : SalutBall
     {
-        float destX;
-        float destY;
+       
 
         public BirdBall(Control control) : base(control, 0 + 25, control.ClientSize.Height-25)
         {
@@ -21,14 +20,18 @@ namespace BirdsBalls_Stepik
                vX = 0;
                vY = 0; */
             //vX = 2;
+            
             brush = new SolidBrush(Color.Red);
             timer.Interval = 50;
         }
 
         public override void Go()
         {
-           centerX += vX ;
-           centerY += vY;
+            
+           base.Go();
+          // centerX += vX;
+         //  centerY +=
+         vY += g;
           
             
         }
