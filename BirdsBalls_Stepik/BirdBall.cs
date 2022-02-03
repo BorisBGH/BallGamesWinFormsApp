@@ -25,16 +25,17 @@ namespace BirdsBalls_Stepik
             timer.Interval = 50;
         }
 
-        public override void Go()
-        {
+      //  public override void Go()
+      //  {
             
-           base.Go();
-          // centerX += vX;
-         //  centerY +=
-         vY += g;
+      //   base.Go();
+      //    //centerX += vX;
+            
+      ////   centerY += vY + g;
+       
           
             
-        }
+      //  }
         public void AcceptTargetAndGo(float x, float y)
         {
 
