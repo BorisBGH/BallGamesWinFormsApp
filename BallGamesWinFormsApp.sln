@@ -15,9 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiffusionWF_StepikHW", "Dif
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaluteBalls_StepikWF", "SaluteBalls_StepikWF\SaluteBalls_StepikWF.csproj", "{0AB86744-8811-4CEA-A72A-18CFB80F4EC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaluteBallsWF_Stepik_HW2_rocket", "SaluteBallsWF_Stepik_HW2_rocket\SaluteBallsWF_Stepik_HW2_rocket.csproj", "{1B6948A7-2188-4D0A-BFA2-C322758C60A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaluteBallsWF_Stepik_HW2_rocket", "SaluteBallsWF_Stepik_HW2_rocket\SaluteBallsWF_Stepik_HW2_rocket.csproj", "{1B6948A7-2188-4D0A-BFA2-C322758C60A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaluteBalls_Stepik_HW3_ninja", "SaluteBalls_Stepik_HW3_ninja\SaluteBalls_Stepik_HW3_ninja.csproj", "{59A82468-39A4-4E64-BE39-3E5408671891}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaluteBalls_Stepik_HW3_ninja", "SaluteBalls_Stepik_HW3_ninja\SaluteBalls_Stepik_HW3_ninja.csproj", "{59A82468-39A4-4E64-BE39-3E5408671891}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaluteBallsWF_Stepik_rocket_Event", "SaluteBallsWF_Stepik_rocket_Event\SaluteBallsWF_Stepik_rocket_Event.csproj", "{4C41AC74-03F6-4DBF-8BBC-D187AE7D926E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdsBalls_Stepik", "BirdsBalls_Stepik\BirdsBalls_Stepik.csproj", "{024FFBE4-2152-4D41-A3FB-A1FAA326F8D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{59A82468-39A4-4E64-BE39-3E5408671891}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59A82468-39A4-4E64-BE39-3E5408671891}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59A82468-39A4-4E64-BE39-3E5408671891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C41AC74-03F6-4DBF-8BBC-D187AE7D926E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C41AC74-03F6-4DBF-8BBC-D187AE7D926E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C41AC74-03F6-4DBF-8BBC-D187AE7D926E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C41AC74-03F6-4DBF-8BBC-D187AE7D926E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024FFBE4-2152-4D41-A3FB-A1FAA326F8D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024FFBE4-2152-4D41-A3FB-A1FAA326F8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024FFBE4-2152-4D41-A3FB-A1FAA326F8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024FFBE4-2152-4D41-A3FB-A1FAA326F8D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

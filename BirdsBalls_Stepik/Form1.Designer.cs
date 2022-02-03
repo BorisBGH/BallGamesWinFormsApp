@@ -1,5 +1,5 @@
 ﻿
-namespace SaluteBalls_Stepik_HW3_ninja
+namespace BirdsBalls_Stepik
 {
     partial class Form1
     {
@@ -29,36 +29,13 @@ namespace SaluteBalls_Stepik_HW3_ninja
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_Play = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // button_Play
-            // 
-            this.button_Play.Location = new System.Drawing.Point(688, 28);
-            this.button_Play.Name = "button_Play";
-            this.button_Play.Size = new System.Drawing.Size(75, 23);
-            this.button_Play.TabIndex = 0;
-            this.button_Play.Text = "Play";
-            this.button_Play.UseVisualStyleBackColor = true;
-            this.button_Play.Click += new System.EventHandler(this.button_Play_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button_Play);
-            this.Name = "Form1";
             this.Text = "Form1";
-           
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_Play;
     }
 }
 

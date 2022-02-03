@@ -20,5 +20,16 @@ namespace SaluteBalls_Stepik_HW3_ninja
             vY = -12;
 
         }
+
+        public void DecreaseSpeed()
+        {
+            timer.Interval = 80;
+            
+        }
+
+        public void ReturnSpeed()
+        {
+            timer.Interval = 20;
+        }
     }
 }
