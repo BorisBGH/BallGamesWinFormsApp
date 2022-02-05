@@ -3,7 +3,7 @@
     public class TopReachedEventArgs
     {
 
-      public  float x;
+       public float x;
        public float y;
 
         public TopReachedEventArgs(float x, float y)
