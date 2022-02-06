@@ -19,6 +19,7 @@ namespace BirdsBalls_Stepik
        int count = 0;
         private bool isClicked = false;
         private bool isPigOnForm = false;
+        private bool hitPig = false;
 
         public Form1()
         {
@@ -29,25 +30,42 @@ namespace BirdsBalls_Stepik
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (pig.CheckForHit(bird))
+            if (pig.CheckForHit(bird) && !hitPig)
             {
-                count++; 
+               
+                //count++;
+                //count_label.Text = count.ToString();
+               
+                
+                count++;
                 count_label.Text = count.ToString();
-                timer.Stop();
-            }
+                hitPig = true;
+               ReturnBird();
+               
 
-            if (pig.centerX > ClientSize.Width + 30 || pig.centerX < -30)
+            }
+            
+            ReturnBird();
+        }
+
+        private void ReturnBird()
+        {
+            if (bird.centerX > ClientSize.Width + 30 || bird.centerX < -30)
             {
                 bird.Stop();
-                bird = new BirdBall(this);
+                //bird = new BirdBall(this);
+              //  timer.Stop();
+                bird.centerX = 25;
+                bird.centerY = ClientSize.Height - 25;
                 bird.Show();
+                isClicked = false;
+                hitPig = false;
             }
         }
-     
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (isPigOnForm)
+         /*   if (isPigOnForm)
             {
                 pig.Clear();
                 isPigOnForm = false;
@@ -62,7 +80,7 @@ namespace BirdsBalls_Stepik
           
                  timer.Start();
                  isClicked = false;
-           
+           */
             
         }
 
@@ -71,16 +89,52 @@ namespace BirdsBalls_Stepik
         {
             if (isClicked == false)
             {
+                timer.Start();
                 bird.DefineDestinationAndSpeed(e.X, e.Y);
                 bird.Start();
                 isClicked = true;
+
+               
+
             }
-            
-            
+            ReturnBird();
+         /*   if (bird.centerX > ClientSize.Width + 30 || bird.centerX < -30)
+            {
+                //  bird.Stop();
+                //  bird = new BirdBall(this);
+               
+                bird.centerX = 25;
+                bird.centerY = ClientSize.Height - 25;
+                //  bird.Show();
+               
+            }
+
+ isClicked = false; */
+
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            if (isPigOnForm)
+            {
+                pig.Clear();
+                isPigOnForm = false;
+            }
+
+            bird = new BirdBall(this);
+            bird.Show();
+
+            pig = new PigBall(this);
+            pig.Show();
+            isPigOnForm = true;
+
+            timer.Start();
+            isClicked = false;
+
         }
     }
 }
