@@ -27,48 +27,16 @@ namespace BirdsBalls_Stepik
         public void DefineDestinationAndSpeed(float x, float y)
         {
           //  DefineAccels(x, y);
-            vX = (x - centerX) / timer.Interval * DefineAcceleration(x,y);
-            vY = (y - centerY) / timer.Interval * DefineAcceleration(x, y);
+            vX = (x - centerX) / timer.Interval * 1.5f;
+            vY = (y - centerY) / timer.Interval * 1.5f;
 
         }
 
       
 
-        private float DefineAcceleration(float x, float y)
-        {
-            if (x - centerX > control.ClientSize.Width/2)
-            {
-                return 2.5f;
-            }
-            if (y - centerY < control.ClientSize.Height/0.8f)
-            {
-                return 2.5f;
-            }
-            return 1;
+      
 
-        } 
-
-      /* private void DefineAccels(float x, float y)
-        {
-            if (x - centerX > control.ClientSize.Width / 3)
-            {
-                accelX = 2.7f;
-            }
-            else
-            {
-                accelX = 1.5f;
-            }
-            if (y - centerY < control.ClientSize.Height / 3)
-            {
-                accelY = 2.7f;
-            }
-            else
-            {
-                accelY = 1.5f;
-            }
-            
-        }
-      */
+     
 
         public override void Go()
         {
@@ -76,7 +44,7 @@ namespace BirdsBalls_Stepik
             if (centerY >= DownSide())
             {
                 vY = -vY;
-                vY *= 0.85f;
+                vY *= 0.8f;
                
             }
         }

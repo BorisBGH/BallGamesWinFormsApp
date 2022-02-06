@@ -27,14 +27,11 @@ namespace BirdsBalls_Stepik
             Draw(brush);
         }
 
-        public bool CheckForHit(BirdBall birdBall)
+        public bool CheckForHit(Ball other)
         {
-            if ((birdBall.centerX + radius > centerX-radius && birdBall.centerX + radius < centerX + radius) && (birdBall.centerY - radius < centerY + radius && birdBall.centerY - radius > centerY-radius) || (birdBall.centerX-radius < centerX+radius && birdBall.centerX > centerX-radius) && (birdBall.centerY - radius < centerY+centerY+radius && birdBall.centerY - radius > centerY - radius))
-            {
-              Clear();
-              return true;
-            }
-            return false;
+            var dX = (other.centerX - centerX);
+            var dY = (other.centerY - centerY);
+            return dX * dX + dY * dY <= (2 * radius) * (2 * radius);
         }
     }
 
