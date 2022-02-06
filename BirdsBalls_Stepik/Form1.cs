@@ -40,8 +40,9 @@ namespace BirdsBalls_Stepik
                 count++;
                 count_label.Text = count.ToString();
                 hitPig = true;
-               ReturnBird();
-               
+                ReturnBird();
+                pig = new PigBall(this);
+                pig.Show();
 
             }
             
@@ -50,11 +51,10 @@ namespace BirdsBalls_Stepik
 
         private void ReturnBird()
         {
-            if (bird.centerX > ClientSize.Width + 30 || bird.centerX < -30)
+            if (bird.centerX > ClientSize.Width + 30 || bird.centerX < -30 || bird.centerY < -70)
             {
                 bird.Stop();
-                //bird = new BirdBall(this);
-              //  timer.Stop();
+               
                 bird.centerX = 25;
                 bird.centerY = ClientSize.Height - 25;
                 bird.Show();
@@ -63,29 +63,10 @@ namespace BirdsBalls_Stepik
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-         /*   if (isPigOnForm)
-            {
-                pig.Clear();
-                isPigOnForm = false;
-            }
-            
-                 bird = new BirdBall(this);
-                 bird.Show();
-
-                 pig = new PigBall(this);
-                 pig.Show();
-                 isPigOnForm = true;
-          
-                 timer.Start();
-                 isClicked = false;
-           */
-            
-        }
+       
 
        
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+       private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (isClicked == false)
             {
@@ -97,21 +78,10 @@ namespace BirdsBalls_Stepik
                
 
             }
-            ReturnBird();
-         /*   if (bird.centerX > ClientSize.Width + 30 || bird.centerX < -30)
-            {
-                //  bird.Stop();
-                //  bird = new BirdBall(this);
-               
-                bird.centerX = 25;
-                bird.centerY = ClientSize.Height - 25;
-                //  bird.Show();
-               
-            }
+         
 
- isClicked = false; */
-
-        }
+        } 
+    
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -119,11 +89,11 @@ namespace BirdsBalls_Stepik
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            if (isPigOnForm)
-            {
-                pig.Clear();
-                isPigOnForm = false;
-            }
+            //if (isPigOnForm)
+            //{
+            //    pig.Clear();
+            //    isPigOnForm = false;
+            //}
 
             bird = new BirdBall(this);
             bird.Show();
